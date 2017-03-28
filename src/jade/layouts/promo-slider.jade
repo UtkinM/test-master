@@ -1,0 +1,48 @@
+include ../mixins/svg-icon
+.slider-promo
+	.container
+		.slider-promo__slides
+				.slider-promo__item.active
+					picture
+						source(srcset="images/promo-slide1@800.jpg" media="(max-width: 480px)")
+						img.slider-promo__img(src="images/promo-slide1.jpg" alt="")
+					.slider-promo__inner
+						div.slider-promo__title(href="#")
+							small.slider-promo__small Открывайте мир
+							|вместе с
+							span.slider-promo__title-nowrap
+								|Трансаэро
+								+svg-icon("#icon-plane",28, 28)(class="slider-promo__title-icon")
+						.slider-promo__leade
+							| Почувствуйте комфорт современного Boeing 747&#8209;300
+				.slider-promo__item.slider-promo__item--after-active
+					picture
+						source(srcset="images/promo-slide1@800.jpg" media="(max-width: 480px)")
+						img.slider-promo__img(src="images/promo-slide1.jpg" alt="")
+					.slider-promo__inner
+						div.slider-promo__title(href="#")
+							small.slider-promo__small Открывайте мир
+							| вместе с
+							span.slider-promo__title-nowrap
+								| Трансаэро
+								+svg-icon("#icon-plane",28, 28)(class="slider-promo__title-icon")
+						.slider-promo__leade
+							| Почувствуйте комфорт современного Boeing 747&#8209;300
+				.slider-promo__item
+					picture
+						source(srcset="images/promo-slide1@800.jpg" media="(max-width: 480px)")
+						img.slider-promo__img(src="images/promo-slide1.jpg" alt="")
+					.slider-promo__inner
+						div.slider-promo__title(href="#")
+							small.slider-promo__small Открывайте мир
+							| вместе с
+							span.slider-promo__title-nowrap
+								| Трансаэро
+								+svg-icon("#icon-plane",28, 28)(class="slider-promo__title-icon")
+						.slider-promo__leade
+							| Почувствуйте комфорт современного Boeing 747-300
+		.slider-promo__control
+			a(href="#").slider-promo__arrow.slider-promo__arrow--left
+				+svg-icon("#icon-arrow-left",30, 60)(class="slider-promo__arrow-icon")
+			a(href="#").slider-promo__arrow.slider-promo__arrow--right
+				+svg-icon("#icon-arrow-right",30, 60)(class="slider-promo__arrow-icon")

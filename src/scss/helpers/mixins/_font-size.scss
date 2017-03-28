@@ -1,0 +1,44 @@
+////организация адаптивной типографики
+//$max-breakpoint: nth($breakpoints, (length($breakpoints) - 1));
+//
+//@mixin make-font-size($fs-font-size) {
+//	@if type-of($fs-font-size) == "list" {
+//		font-size: nth($fs-font-size, 1);
+//		@if (length($fs-font-size) > 1) {
+//			$line-height: nth($fs-font-size, 2)/nth($fs-font-size, 1);
+//			line-height: decimal-floor($line-height, 2);
+//		}
+//	}
+//	@else {
+//		font-size: $fs-font-size;
+//	}
+//}
+//
+//@mixin font-size($fs-map) {
+//	@if($mobile-first) {
+//		@each $breakpoints, $fs-font-size in $fs-map {
+//			@if $breakpoints == "small" {
+//				@include make-font-size($fs-font-size);
+//			}
+//
+//			@else {
+//				@include breakpoint($breakpoints) {
+//					@include make-font-size($fs-font-size);
+//				}
+//			}
+//		}
+//	}
+//
+//	@else {
+//		@each $breakpoints, $fs-font-size in $fs-map {
+//			@if ($breakpoints == $max-breakpoint){
+//				@include make-font-size($fs-font-size);
+//			}
+//			@else {
+//				@include breakpoint($breakpoints down) {
+//					@include make-font-size($fs-font-size);
+//				}
+//			}
+//		}
+//	}
+//}

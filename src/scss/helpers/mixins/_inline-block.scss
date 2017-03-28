@@ -1,0 +1,11 @@
+@mixin inline-block($vertical-align, $font-size-base) {
+	display: inline-block;
+	vertical-align: $vertical-align;
+
+	if($font-size-base) {
+		font-size: $font-size-base;
+	}
+}
+
+
+

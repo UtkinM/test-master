@@ -1,0 +1,17 @@
+@mixin absolute-position-center($child-element, $width, $height) {
+	position: relative;
+
+	#{$child-element} {
+		display: block;
+		height: $height;
+		width: $width;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+

@@ -1,0 +1,1 @@
+document.querySelector('.svg-sprite').innerHTML = SVG_SPRITE;

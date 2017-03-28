@@ -1,0 +1,53 @@
+mixin check(type, id, name, value, lable)
+	if(type == "checkbox")
+		.checkbox-wrapper
+			input(type=type id=id name=name)
+			lable.checkbox-label(for=id)=lable
+	else
+		.radio-wrapper
+			input(type=type id=id name=name value=value)
+			lable.radio-label(for=id)=lable
+
+mixin field(type, id, name, placeholder, lable, options)
+	if(type == "textarea")
+		lable(class="input-lable" id=id)=lable
+		.field-wrapper
+			textarea(class="field" name=name placeholder=placeholder)
+
+	else if(type == "select")
+		lable(class="input-lable" id=id)=lable
+		.field-wrapper
+			select(class="field" name=name)
+				each option, i in options
+					option(value=i) #{option}
+
+	else
+		lable(class="input-lable" id=id)=lable
+		.field-wrapper
+			input(type=type class="field" name=name placeholder=placeholder)
+
+
+mixin form
+	//шпаргалка стркутура формы
+	.form
+		.form__fieldset
+			.form__title (или .form__fieldset-title)
+			.form__row
+				.form__col
+					.form__item
+					.form__item
+					.form__item
+				.form__col
+					.form__item
+					.form__item
+					.form__item
+
+			.form__row
+				.form__col
+					.form__item
+					.form__item
+					.form__item
+				.form__col
+					.form__item
+					.form__item
+					.form__item

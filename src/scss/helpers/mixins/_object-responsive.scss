@@ -1,0 +1,19 @@
+@mixin object-responsive ($class, $class-item, $padding-bottom: 75%) {
+	#{$class} {
+		position: relative;
+		display: block;
+		height: 0;
+		overflow: hidden;
+		padding-bottom: $padding-bottom;
+
+		#{$class-item} {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}

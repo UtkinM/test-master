@@ -1,0 +1,22 @@
+include mixins/title
+include mixins/form
+
+doctype html
+html(lang="ru")
+	head
+		include base/metatags
+		include base/styles
+		+title
+
+	body
+		include base/svg
+		.page-wrapper
+			.page-overlay
+			include layouts/header
+			ul.panels
+				li.panels__item.active(id="panel1")
+					include layouts/promo-slider
+				li.panels__item(id="panel2")
+				li.panels__item(id="panel3")
+			script(src="js/main.js")
+		.page-emty

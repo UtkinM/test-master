@@ -1,0 +1,72 @@
+/*search
+/*________________________________________________*/
+.search {
+	&__wrapper {
+		position: relative;
+		min-height: 32px;
+	}
+
+	&__field {
+		display: block;
+		width: 100%;
+		border: 1px solid #c8c8c8;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 6px 10px;
+		padding-right: 25px;
+		outline: none;
+		transition: all $default-transition-duration $default-transition-function;
+
+		@include max-screen(point(medium)){
+			position: absolute;
+			left: auto;
+			right: 0;
+			width: 0;
+
+			&.open {
+				width: 100%;
+			}
+		}
+
+		&::-webkit-input-placeholder,
+		&:-moz-placeholder,
+		&::-ms-input-placeholder,
+		&::placeholder {
+			color: #b2b2b2;
+		}
+
+		&:focus {
+			border-color: #000;
+		}
+
+		&:focus::-webkit-input-placeholder {color: transparent;}
+		&:focus::-moz-placeholder          {color: transparent;}
+		&:focus:-moz-placeholder           {color: transparent;}
+		&:focus:-ms-input-placeholder      {color: transparent;}
+		&:focus::placeholder {color: transparent;}
+	}
+
+	&__btn {
+		outline: none;
+		border: none;
+		background-color: transparent;
+		position: absolute;
+		width: 23px;
+		top: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__icon {
+		position: absolute;
+		display: block;
+		max-width: 23px;
+		height: auto;
+		max-height: 32px;
+		top: 0;
+		bottom: 0;
+		right: 6px;
+		margin: auto 0;
+		fill: rgba(#b2b2b2, .60);
+	}
+}

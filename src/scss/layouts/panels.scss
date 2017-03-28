@@ -1,0 +1,23 @@
+/*panels
+/*________________________________________________*/
+.panels {
+	position: relative;
+
+	&__item {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		opacity: 0;
+		transition: all $default-transition-duration 0s $default-transition-function;
+
+		&.active {
+			position: static;
+			z-index: 1;
+			opacity: 1;
+			transition: all .6s .4s $default-transition-function;
+		}
+	}
+}

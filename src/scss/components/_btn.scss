@@ -1,0 +1,54 @@
+/*btn
+/*________________________________________________*/
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 15px;
+	line-height: 1.2;
+	@include letter-spacing(15px, 63);
+	color: #fff;
+	background-color: #313131;
+	text-transform: uppercase;
+	padding: 12px 36px;
+	font-weight: 400;
+	text-decoration: none;
+	transition:background-color .2s .4s $default-transition-function, color .2s .4s $default-transition-function, background-size .4s 0s $default-transition-function;
+	background-image:
+			linear-gradient(#f24e33, #f24e33),
+			linear-gradient(#f24e33, #f24e33),
+			linear-gradient(#f24e33, #f24e33),
+			linear-gradient(#f24e33, #f24e33),
+			linear-gradient(#1b1b1b, #1b1b1b),
+			linear-gradient(#1b1b1b, #1b1b1b),
+			linear-gradient(#1b1b1b, #1b1b1b),
+			linear-gradient(#1b1b1b, #1b1b1b);
+	background-position: top left,
+	top right,
+	bottom right,
+	bottom left,
+	top right,
+	top right,
+	bottom right,
+	bottom left;
+	background-repeat: no-repeat;
+	background-size: 0 1px, 1px 0, 0 1px, 1px 0, 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+
+	@include max-screen(point(large)) {
+		padding: 14px 34px;
+		font-size: 12px;
+	}
+
+	@include screen(0, point(medium)){
+		padding: 10px 20px;
+	}
+
+	&:hover {
+		background-color: transparent;
+		border-color: transparent;
+		color: #313131;
+		background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+		transition:background-color .2s 0s $default-transition-function, color .2s .0s $default-transition-function, background-size .4s .2s $default-transition-function;
+	}
+
+}

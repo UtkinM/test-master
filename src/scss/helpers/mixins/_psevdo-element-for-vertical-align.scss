@@ -1,0 +1,9 @@
+//Вертикальное выравнивание элементов с неизвестными размерами размерами
+@mixin psevdo-element-for-vertical-align(){
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%; width: .1px;
+	}
+}

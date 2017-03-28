@@ -1,0 +1,44 @@
+include ../mixins/svg-icon
+
+.header
+	.header__top-line.hide-medium
+		.container.container--clearfix.container--padding
+			ul.header__language-list
+				li.header__language-item
+					a.header__language-link(href="#")
+						|USA site
+				li.header__language-item
+					a.header__language-link(href="#")
+						|Deutsch site
+				li.header__language-item
+					span.header__language-caption Россия:
+					a.header__language-link(href="#") Switch to english
+
+			a.header__user-block(href="#")
+				|Вход и регистрация
+
+			a.header__timing(href="#")
+				+svg-icon("#icon-clock",20, 20)(class="header__timing-icon")
+				|Онлайн-табло
+
+	.header__bottom
+		.container.container--clearfix.container--padding
+			div.header__bottom-left
+				a.header__logo
+					img.header__logo-img(src="images/logo.svg" width="230" height="30" alt="Компани Трансаэро")
+			div.header__bottom-right
+				form.search
+					.search__wrapper
+						input(type="text" class="search__field" name="search" placeholder="поиск по сайту")
+						button(type="submit" class="search__btn")
+							+svg-icon("#icon-search",18, 18)(class="search__icon")
+			nav.header__menu-tabs
+				ul.header__menu-tabs-list
+					li.header__menu-tabs-item.active
+						a.header__menu-tabs-link(href="#panel1") Возможности
+					li.header__menu-tabs-item
+						a.header__menu-tabs-link(href="#panel2") Информация
+					li.header__menu-tabs-item
+						a.header__menu-tabs-link(href="#panel3") Привилегии
+				a.header__menu-tabs-switch(href="#")
+					span

@@ -1,0 +1,4 @@
+//анимация
+@mixin animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms) {
+	animation: $name $duration $iterations $timing-function $delay;
+}

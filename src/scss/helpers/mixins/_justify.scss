@@ -1,0 +1,28 @@
+@mixin text-align-justify-between() {
+	text-align: justify;
+
+	&:after {
+		content: "";
+		height: 0;
+		width: 100%;
+		display: inline-block;
+	}
+}
+
+@mixin justify ($class, $class-item) {
+	 #{$class} {
+		 display: table;
+		 width: 100%;
+		 table-layout: fixed;
+		 border-collapse: separate;
+		 #{$class-item} {
+			 float: none;
+			 display: table-cell;
+			 width: 1%;
+		 }
+
+		 #{$class-item} > * {
+			 width: 100%;
+		 }
+	 }
+}

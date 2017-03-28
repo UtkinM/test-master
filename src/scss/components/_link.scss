@@ -1,0 +1,42 @@
+/*link
+/*________________________________________________*/
+.link {
+	display: inline-block;
+	vertical-align: middle;
+	color: #313131;
+	font-size: 15px;
+	line-height: 1.2;
+	@include letter-spacing(15px, 63);
+	padding-right: 23px;
+	text-transform: uppercase;
+	font-weight: 400;
+	position: relative;
+	text-decoration: none;
+	@include max-screen(point(large)) {
+		font-size: 12px;
+		padding-right: 18px;
+	}
+
+	&:after {
+		content: ">>";
+		font-size: 17px;
+		font-weight: 400;
+		color: #c6ac9d;
+		transform: translateX(0);
+		position: absolute;
+		display: block;
+		transition: all $default-transition-duration $default-transition-function;
+		top: -1px;
+		right: 0;
+
+		@include max-screen(point(large)) {
+			font-size: 15px;
+			line-height: 1;
+		}
+	}
+
+	&:hover:after {
+		color: rgba(#f24e33, .9);
+		transform: translateX(3px);
+	}
+}
